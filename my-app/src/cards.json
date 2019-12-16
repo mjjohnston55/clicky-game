@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Artemis",
+        "imageLocation": "../public/images/artemis.jpg",
+        "count": 0
+    },
+    {
+        "id": 2,
+        "name": "Charlie",
+        "imageLocation": "../public/images/charlie.jpg",
+        "count": 0
+    },
+    {
+        "id": 3,
+        "name" : "CountryMac",
+        "imageLocation": "../public/images/country-mac.jpg",
+        "count": 0
+    },
+    {
+        "id": 4,
+        "name": "Cricket",
+        "imageLocation": "../public/images/cricket.png",
+        "count": 0
+    },
+    {
+        "id": 5,
+        "name": "Dee",
+        "imageLocation": "../public/images/dee.jpg",
+        "count": 0
+    },
+    {
+        "id": 6,
+        "name": "Dennis",
+        "imageLocation": "../public/images/dennis.jpg",
+        "count": 0
+    },
+    {
+        "id": 7,
+        "name": "Frank",
+        "imageLocation": "../public/images/frank.jpg",
+        "count": 0
+    },
+    {
+        "id": 8,
+        "name": "Liam",
+        "imageLocation": "../public/images/liam.jpg",
+        "count": 0
+    },
+    {
+        "id": 9,
+        "name": "Mac",
+        "imageLocation": "../public/images/mac.jpeg",
+        "count": 0
+    },
+    {
+        "id": 10,
+        "name": "Margaret",
+        "imageLocation": "../public/images/margaret.jpg",
+        "count": 0
+    },
+    {
+        "id": 11,
+        "name": "Ryan",
+        "imageLocation": "../public/images/ryan.png",
+        "count": 0
+    },
+    {
+        "id": 12,
+        "name": "Therapist",
+        "imageLocation": "../public/images/therapist.jpg",
+        "count": 0
+    }
+]
