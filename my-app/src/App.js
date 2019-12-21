@@ -11,8 +11,8 @@ state = {
     highscore: 0
   };
 
-  // every time a round ends
-  gameEnd = () => {
+  // run every time a round ends (wrong card chosen)
+  roundEnd = () => {
     // updates highscore if applicable with a special alert
     if (this.state.score > this.state.highscore) {
       this.setState({highscore: this.state.score})
@@ -24,7 +24,7 @@ state = {
     };
     // resets card counts
     this.state.cards.forEach(card => {
-      card.count = 0;
+      card.counter = 0;
     });
     // reset current score
     this.setState({score: 0});
@@ -33,8 +33,8 @@ state = {
   render() {
     return (
       <wrapper>
-        <header>
-        </header>
+        <Header score={this.state.score} highscore={this.state.highscore}>
+        </Header>
       </wrapper>
     )
     };
