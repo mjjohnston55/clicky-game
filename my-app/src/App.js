@@ -2,7 +2,8 @@ import './App.css';
 import React, {Component} from "react";
 import Card from "./components/Card.js";
 import cards from "./cards.json";
-import Header from "./components/header.js";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
 
 class App extends Component {
 state = {
@@ -22,7 +23,7 @@ state = {
     // if no new high score, notifies of loss and display score achieved
     alert("You Lost! You scored: " + this.state.score)
     };
-    // resets card counts
+    // resets card click counts
     this.state.cards.forEach(card => {
       card.counter = 0;
     });
@@ -30,19 +31,44 @@ state = {
     this.setState({score: 0});
   };
 
+  guessChecker = id => {
+    this.state.cards.find((j, i) => {
+      if (j.id === id) {
+        // if clicked card hasn't been clicked yet
+        if (cards.i.clicks === 0) {
+          // +1 to card's click count variable and +1 to score
+          cards.i.clicks ++;
+          this.setState({score: this.state.score = this.}, function(){
+            console.log(this.state.score);
+          });
+          // shuffle cards randomly
+          this.state.cards.sort(() => Math.random() - 0.5)
+        }
+        else  {
+          this.roundEnd();
+        }
+      }
+    });
+  }
+
+
   render() {
     return (
-      <wrapper>
+      <Wrapper>
         <Header score={this.state.score} highscore={this.state.highscore}>
         </Header>
-      </wrapper>
+        {this.state.cards.map(card => (
+          <Card
+          id={card.id}
+          key={card.id}
+          image={card.image}
+          guessChecker={this.guessChecker}
+          />
+        ))}
+      </Wrapper>
     )
     };
 }
-
-
-
-
 
 
 export default App;
